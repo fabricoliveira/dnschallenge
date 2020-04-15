@@ -25,7 +25,7 @@ You can download the REST API tests, which I created and shared on Postman.
 
 You can download/import in following link:
 
-[https://www.getpostman.com/collections/b8bbcfafba19ebe445e9](https://www.getpostman.com/collections/b8bbcfafba19ebe445e9)
+[https://www.getpostman.com/collections/453579797e23520b3910](https://www.getpostman.com/collections/453579797e23520b3910)
 
 ---
 
