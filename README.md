@@ -1,13 +1,13 @@
 # DNS Challenge
 
 ---
-####Implementation of an DNS API.
+#### Implementation of an DNS API.
 
 The code for this REST API was developed in the Java language, with the Spring Boot framework and the MySQL database.
 
 ---
 
-####Importing the project on your IDE
+#### Importing the project on your IDE
 
 To run this project, you can clone this repository on the IDE of your choice and the MAVEN will download all dependencies and build the project.
 
