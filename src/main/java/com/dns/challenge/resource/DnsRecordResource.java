@@ -20,7 +20,7 @@ import com.dns.challenge.model.dto.SearchDTO;
 import com.dns.challenge.service.DnsRecordService;
 
 @RestController
-@RequestMapping
+@RequestMapping("/dns")
 public class DnsRecordResource {
 
 	
