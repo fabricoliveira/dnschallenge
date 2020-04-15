@@ -33,12 +33,16 @@ You can download/import in following link:
 
 ##### The URL for requests is
 	
-	http://localhost:8080/dns/
+	On Heroku: https://dnschallenge.herokuapp.com/dns/
+	
+	On your IDE: http://localhost:8080/dns/
 	
 	
 ##### Searching a DNS Record by entering it's Id on URL
 
-	http://localhost:8080/dns/1
+	On Heroku: https://dnschallenge.herokuapp.com/dns/1
+	
+	On your IDE: http://localhost:8080/dns/1
 	
 	
 ##### Searching a DNS Record by JSON on the Body of the request
