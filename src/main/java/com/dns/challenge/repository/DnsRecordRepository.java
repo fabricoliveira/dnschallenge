@@ -29,4 +29,14 @@ public interface DnsRecordRepository extends JpaRepository<DnsRecord, Long> {
 				 + "group by name", nativeQuery = true)
 	Object[][] mapHostnamesWithDnsRecordsBySelectedHostnames(List<String> dnsRecordIds, List<String> excluded);
 
+
+	@Query(value = "SELECT dns.id, ip.address, hn.name "
+				 + "FROM dnsrecord dns "
+				 + "INNER JOIN ip ip "
+				 + "ON ip.dnsrecordId = dns.id "
+				 + "INNER JOIN hostname hn "
+				 + "ON hn.dnsrecordId = dns.id "
+				 + "WHERE dns.id = ?1", nativeQuery = true)
+	Object[][] findByIdJoinIdJoinHostname(Long id);
+
 }

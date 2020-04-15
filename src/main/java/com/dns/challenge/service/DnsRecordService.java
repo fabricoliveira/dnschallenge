@@ -61,6 +61,17 @@ public class DnsRecordService {
 		
 		return result; 
 	}
+
+
+	public DnsRecordDTO findByIdJoinIdJoinHostname(Long id) {
+		DnsRecordDTO result = new DnsRecordDTO();
+		for(Object[] o : dnsRecordRepository.findByIdJoinIdJoinHostname(id)){
+			result.setId(Long.parseLong(o[0].toString()));
+			result.setIp(o[1].toString());
+			result.getHostnames().add(o[2].toString());
+		}
+		return result;
+	}
 	
 	
 }
