@@ -31,17 +31,17 @@ You can download/import in following link:
 
 #### Using the API
 
-###### The URL for requests is
+##### The URL for requests is
 	
 	http://localhost:8080/dns/
 	
 	
-###### Searching a DNS Record by entering it's Id on URL
+##### Searching a DNS Record by entering it's Id on URL
 
 	http://localhost:8080/dns/1
 	
 	
-###### Searching a DNS Record by JSON on the Body of the request
+##### Searching a DNS Record by JSON on the Body of the request
 	
 Set on the Headers of your REST API Testing Tool (like Postman)
 
@@ -90,7 +90,7 @@ As a response you will receive a JSON with this format
 	}
 	
 	
-###### Adding a new DNS Record 
+##### Adding a new DNS Record 
 
 Set on the Headers of your REST API Testing Tool (like Postman)
 
@@ -115,5 +115,5 @@ As a response you will receive a JSON with this format
 			"amet.com"
 		]
 	}
-	
+
 Note that you also received the Location on Headers of the response
