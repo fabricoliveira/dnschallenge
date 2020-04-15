@@ -29,19 +29,19 @@ You can download/import in following link:
 
 ---
 
-####Using the API
+#### Using the API
 
-######The URL for requests is
+###### The URL for requests is
 	
 	http://localhost:8080/dns/
 	
 	
-######Searching a DNS Record by entering it's Id on URL
+###### Searching a DNS Record by entering it's Id on URL
 
 	http://localhost:8080/dns/1
 	
 	
-######Searching a DNS Record by JSON on the Body of the request
+###### Searching a DNS Record by JSON on the Body of the request
 	
 	Set on the Headers of your REST API Testing Tool (like Postman)
 
@@ -90,7 +90,7 @@ You can download/import in following link:
 		}
 		
 		
-######Adding a new DNS Record 
+###### Adding a new DNS Record 
 
 	Set on the Headers of your REST API Testing Tool (like Postman)
 
