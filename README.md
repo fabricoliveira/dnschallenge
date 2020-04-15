@@ -43,78 +43,77 @@ You can download/import in following link:
 	
 ###### Searching a DNS Record by JSON on the Body of the request
 	
-	Set on the Headers of your REST API Testing Tool (like Postman)
+Set on the Headers of your REST API Testing Tool (like Postman)
 
-		Content-Type: application/json
+	Content-Type: application/json
+
+Set the HTTP request method to GET and paste your JSON on the Body with this format
+
+	{
+		"included" : ["ipsum.com", "dolor.com"],
+		"excluded" : ["sit.com"],
+		"page" : 1
+	}
 	
-	Set the HTTP request method to GET and paste your JSON on the Body with this format
+As a response you will receive a JSON with this format
+
+	{
+		"totalNumberOfMatchingDnsRecords": 2,
+		"matchingDnsRecords": [
+			{
+				"id": "1",
+				"ip": "1.1.1.1"
+			},
+			{
+				"id": "3",
+				"ip": "3.3.3.3"
+			}
+		],
+		"hostnamesAssociatedWithMatchingDnsRecords": [
+			{
+				"hostname": "lorem.com",
+				"numberOfMatchingDnsRecords": "1"
+			},
+			{
+				"hostname": "ipsum.com",
+				"numberOfMatchingDnsRecords": "2"
+			},
+			{
+				"hostname": "dolor.com",
+				"numberOfMatchingDnsRecords": "2"
+			},
+			{
+				"hostname": "amet.com",
+				"numberOfMatchingDnsRecords": "2"
+			}
+		]
+	}
 	
-		{
-			"included" : ["ipsum.com", "dolor.com"],
-			"excluded" : ["sit.com"],
-			"page" : 1
-		}
-		
-	As a response you will receive a JSON with this format
 	
-		{
-			"totalNumberOfMatchingDnsRecords": 2,
-			"matchingDnsRecords": [
-				{
-					"id": "1",
-					"ip": "1.1.1.1"
-				},
-				{
-					"id": "3",
-					"ip": "3.3.3.3"
-				}
-			],
-			"hostnamesAssociatedWithMatchingDnsRecords": [
-				{
-					"hostname": "lorem.com",
-					"numberOfMatchingDnsRecords": "1"
-				},
-				{
-					"hostname": "ipsum.com",
-					"numberOfMatchingDnsRecords": "2"
-				},
-				{
-					"hostname": "dolor.com",
-					"numberOfMatchingDnsRecords": "2"
-				},
-				{
-					"hostname": "amet.com",
-					"numberOfMatchingDnsRecords": "2"
-				}
-			]
-		}
-		
-		
 ###### Adding a new DNS Record 
 
-	Set on the Headers of your REST API Testing Tool (like Postman)
+Set on the Headers of your REST API Testing Tool (like Postman)
 
-		Content-Type: application/json
+	Content-Type: application/json
 
-	Set the HTTP request method to Post and paste your JSON on the Body with this format
+Set the HTTP request method to Post and paste your JSON on the Body with this format
+
+	{
+		"ip": "1.1.1.1",
+		"hostnames" : ["lorem.com", "ipsum.com", "dolor.com", "amet.com"]
+	}
 	
-		{
-			"ip": "1.1.1.1",
-			"hostnames" : ["lorem.com", "ipsum.com", "dolor.com", "amet.com"]
-		}
-		
-	As a response you will receive a JSON with this format
-		
-		{
-			"id": 6,
-			"ip": "1.1.1.1",
-			"hostnames": [
-				"lorem.com",
-				"ipsum.com",
-				"dolor.com",
-				"amet.com"
-			]
-		}
-		
-	Note that you also received the Location on Headers of the response
----
+As a response you will receive a JSON with this format
+	
+	{
+		"id": 6,
+		"ip": "1.1.1.1",
+		"hostnames": [
+			"lorem.com",
+			"ipsum.com",
+			"dolor.com",
+			"amet.com"
+		]
+	}
+	
+Note that you also received the Location on Headers of the response
