@@ -14,6 +14,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
+
+import com.dns.challenge.model.dto.DnsRecordDTO;
+import com.dns.challenge.validator.HostnameValidator;
+import com.dns.challenge.validator.IpValidator;
 
 @Entity
 @Table(name = "dnsrecord")
@@ -64,6 +69,23 @@ public class DnsRecord implements Serializable {
 	
 	public void setHostnames(List<Hostname> hostnames) {
 		this.hostnames = hostnames;
+	}
+	
+	
+	@Transient
+	public DnsRecord dnsRecordBuilder(DnsRecordDTO dnsRecordDTO) throws Exception {
+		IpValidator.validate(dnsRecordDTO.getIp());
+
+		DnsRecord dnsRecord = new DnsRecord();
+
+		dnsRecord.setIp(new Ip(dnsRecordDTO.getIp(), dnsRecord));
+
+		for (String name : dnsRecordDTO.getHostnames()) {
+			HostnameValidator.validate(name);
+			dnsRecord.getHostnames().add(new Hostname(name, dnsRecord));
+		}
+
+		return dnsRecord;
 	}
 
 }
