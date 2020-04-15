@@ -23,7 +23,7 @@ Importing the project on your IDE
 	You can download the REST API tests, which I created and shared on Postman.
 	You can download/import in following link:
 	
-		[a link](https://www.getpostman.com/collections/b8bbcfafba19ebe445e9)
+		[https://www.getpostman.com/collections/b8bbcfafba19ebe445e9](https://www.getpostman.com/collections/b8bbcfafba19ebe445e9)
 		
 
 Using the API
