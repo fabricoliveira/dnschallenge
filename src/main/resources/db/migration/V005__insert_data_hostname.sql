@@ -1,0 +1,15 @@
+INSERT INTO hostname VALUES 
+(1,'lorem.com',1),
+(2,'ipsum.com',1),
+(3,'dolor.com',1),
+(4,'amet.com',1),
+(5,'ipsum.com',2),
+(6,'ipsum.com',3),
+(7,'dolor.com',3),
+(8,'amet.com',3),
+(9,'ipsum.com',4),
+(10,'dolor.com',4),
+(11,'sit.com',4),
+(12,'amet.com',4),
+(13,'dolor.com',5),
+(14,'sit.com',5);
